@@ -1,23 +1,29 @@
+import java.util.Scanner;
+
 public class hello {
     public static void main(String[] args) {
 
-        int age = 29;
-        String name = "Rob";
+        Scanner input = new Scanner(System.in);
+        int password = 2975429;
+        String userName = "Steve";
 
-        if(name == "Steve" && age == 28)
-        {
-            System.out.println("Hello, " + name + ". You are, " + age);
-        }
+        System.out.println("Enter your user name: ");
+        String name = input.next();
+        System.out.println("Enter your password: ");
+        int pw = input.nextInt();
 
-        else if(name == "Steve" && age >= 29)
+
+
+        if(name.equals(userName) && pw == password)
         {
-            System.out.println("Woah " + name + ", you are older from when i last spoke to you!");
+            System.out.println("Hello, " + userName + ". Nice to see you today!");
         }
 
         else
         {
-            System.out.println("Please validate program to include your information. Thank you!");
+            System.out.println("Credentials are invalid. Please try again");
         }
 
+        input.close();
     }
 }
